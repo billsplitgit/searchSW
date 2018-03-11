@@ -1,0 +1,23 @@
+
+<div class="LoginContainer">
+
+    <h2>Checkout planets from Star Wars!</h2>
+    
+    <h1>Login Here</h1>
+    <div class='loader hidden'>
+      <mat-spinner></mat-spinner>
+    </div>
+    <!-- <h3>{{name + b_y}}</h3> -->
+  <mat-form-field>
+    <input #loginId (keypress.enter) = 'validateLogin(loginId.value, password.value)' matInput placeholder="Login ID" required autofocus>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input #password (keypress.enter) = 'validateLogin(loginId.value, password.value)' matInput placeholder="password" type="password" required>
+  </mat-form-field>
+
+  <button mat-fab (click) = 'validateLogin(loginId.value, password.value)'>Login</button>
+ 
+<!-- {{people.results[0].name}}
+{{people.results[0].birth_year}} -->
+</div>

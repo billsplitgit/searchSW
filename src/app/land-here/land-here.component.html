@@ -1,0 +1,12 @@
+<div class="searchArea">
+<mat-form-field class="searchIpt">
+  <input [(ngModel)]='filterPlanet' #searchTxt (keypress) = 'searchPlanets(searchTxt.value)' matInput placeholder="Search here for the planets" required autofocus>
+</mat-form-field>
+</div>
+<div class="resultArea">
+<ul class="planetsList">
+  <li class="planet" *ngFor = 'let planet of planets | planetFilter : filterPlanet'>
+    {{planet.name}}
+  </li>
+</ul>
+</div> 
